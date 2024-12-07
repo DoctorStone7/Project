@@ -1,6 +1,9 @@
 # Используем базовый образ с Ubuntu
 FROM ubuntu:20.04
 
+# Установим переменные окружения для отключения интерактивных запросов
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Устанавливаем необходимые зависимости
 RUN apt-get update && apt-get install -y \
     build-essential \
