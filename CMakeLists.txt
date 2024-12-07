@@ -1,23 +1,22 @@
-cmake_minimum_required(VERSION 3.20.0)
-project(boostpz VERSION 0.1.0 LANGUAGES C CXX)
+cmake_minimum_required(VERSION 3.16)
 
-set(BOOST_ROOT E:/boost)
-set(BOOST_INCLUDEDIR E:/boost/include/boost-1_86)
-set(boost_STATIC_RUNTIME ON)
+# Устанавливаем название проекта
+project(ChatApp)
 
-if(MINGW)
-    link_libraries(ws2_32 wsock32)
-endif()
+# Устанавливаем версию C++
+set(CMAKE_CXX_STANDARD 14)
 
+# Ищем Boost (для использования Boost Asio)
+find_package(Boost 1.70 REQUIRED COMPONENTS system)
 
-find_package(Boost 1.70 REQUIRED COMPONENTS system filesystem)
+# Указываем исходные файлы
+add_executable(server server.cpp)
+add_executable(client client.cpp)
 
-add_executable(boostpz main.cpp)
+# Линкуем Boost с вашими исполняемыми файлами
+target_link_libraries(server Boost::Boost)
+target_link_libraries(client Boost::Boost)
 
-if(Boost_FOUND)
-    target_include_directories(${PROJECT_NAME} PUBLIC ${Boost_INCLUDE_DIR})
-    target_link_libraries(${PROJECT_NAME} ${Boost_LIBRARIES})
-    message(STATUS "Found BOOST ${Boost_VERSION_STRING}")
-else()
-    message(STATUS "WEBSOCKET BOOST Not Found")
-endif()
+# Для Boost Asio также может понадобиться библиотека boost_system
+target_link_libraries(server Boost::System)
+target_link_libraries(client Boost::System)
