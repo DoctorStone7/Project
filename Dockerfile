@@ -8,8 +8,11 @@ ENV LC_ALL C.UTF-8
 # Устанавливаем переменную окружения для пропуска интерактивных запросов (для debconf)
 ENV DEBIAN_FRONTEND=noninteractive
 
+# Добавляем PPA для последней версии Boost
+RUN add-apt-repository ppa:boost-latest/ppa && apt-get update
+
 # Устанавливаем необходимые зависимости
-RUN apt-get update && apt-get install -y \
+RUN apt-get install -y \
     g++ \
     libboost-system-dev \
     libboost-thread-dev \
@@ -19,10 +22,7 @@ RUN apt-get update && apt-get install -y \
     software-properties-common \
     && rm -rf /var/lib/apt/lists/*
 
-# Добавляем PPA для последней версии Boost
-RUN add-apt-repository ppa:boost-latest/ppa && apt-get update
-
-# Скачиваем и устанавливаем Boost из исходников, если стандартные пакеты не работают
+# Если Boost из PPA не устраивает, скачиваем и устанавливаем Boost из исходников
 RUN wget -qO- https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.gz | tar xvz -C /usr/local
 RUN cd /usr/local/boost_1_75_0 && ./bootstrap.sh && ./b2 install
 
