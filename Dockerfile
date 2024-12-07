@@ -1,10 +1,11 @@
 # Используем базовый образ с компилятором C++
 FROM gcc:latest
 
-# Устанавливаем зависимости для Boost
+# Устанавливаем зависимости для Boost и компилятора
 RUN apt-get update && apt-get install -y \
-    libboost-all-dev && \
-    rm -rf /var/lib/apt/lists/*
+    libboost-all-dev \
+    build-essential \
+    && rm -rf /var/lib/apt/lists/*
 
 # Копируем файлы проекта в контейнер
 WORKDIR /app
