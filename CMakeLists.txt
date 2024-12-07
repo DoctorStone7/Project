@@ -1,22 +1,18 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.10)
 
-# Устанавливаем название проекта
-project(ChatApp)
+# Указываем название проекта
+project(Chat-)
 
-# Устанавливаем версию C++
-set(CMAKE_CXX_STANDARD 14)
-
-# Ищем Boost (для использования Boost Asio)
+# Находим библиотеку Boost (минимальная версия 1.70, компоненты system)
 find_package(Boost 1.70 REQUIRED COMPONENTS system)
 
-# Указываем исходные файлы
+# Указываем, какие файлы будут собираться
 add_executable(server server.cpp)
 add_executable(client client.cpp)
 
-# Линкуем Boost с вашими исполняемыми файлами
-target_link_libraries(server Boost::Boost)
-target_link_libraries(client Boost::Boost)
+# Подключаем Boost и другие необходимые библиотеки
+target_link_libraries(server Boost::Boost Boost::System)
+target_link_libraries(client Boost::Boost Boost::System)
 
-# Для Boost Asio также может понадобиться библиотека boost_system
-target_link_libraries(server Boost::System)
-target_link_libraries(client Boost::System)
+# Указываем, что мы хотим использовать C++11 или новее
+set(CMAKE_CXX_STANDARD 11)
