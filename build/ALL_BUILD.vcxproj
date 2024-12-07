@@ -173,10 +173,6 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </ProjectReference>
-    <ProjectReference Include="E:\boostpz\build\client.vcxproj">
-      <Project>{558CEB59-06C2-3C45-B8EA-603B387C14EB}</Project>
-      <Name>client</Name>
-    </ProjectReference>
     <ProjectReference Include="E:\boostpz\build\server.vcxproj">
       <Project>{9631DCF3-D270-3B9A-8F89-C83C1B07FDC3}</Project>
       <Name>server</Name>

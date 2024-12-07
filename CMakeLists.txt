@@ -8,13 +8,11 @@ find_package(Boost 1.70 REQUIRED)
 
 # Указываем, какие файлы будут собираться
 add_executable(server server.cpp)
-add_executable(client client.cpp)
 
 # Подключаем Boost
 if(Boost_FOUND)
     include_directories(${Boost_INCLUDE_DIRS})
     target_link_libraries(server ${Boost_LIBRARIES} pthread)
-    target_link_libraries(client ${Boost_LIBRARIES} pthread)
 else()
     message(FATAL_ERROR "Boost not found!")
 endif()

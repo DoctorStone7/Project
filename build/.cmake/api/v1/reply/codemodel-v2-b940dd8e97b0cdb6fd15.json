@@ -17,8 +17,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -35,8 +34,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -45,7 +43,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Debug-5ba56f3b69cffd8da009.json",
+					"jsonFile" : "target-ALL_BUILD-Debug-5045717f9250f9be9cfb.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
@@ -58,15 +56,8 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-client-Debug-350565f3021a64f31e50.json",
-					"name" : "client",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-server-Debug-5d2b6dd03c1777e848e7.json",
+					"jsonFile" : "target-server-Debug-de6cc4b4f8780d13775a.json",
 					"name" : "server",
 					"projectIndex" : 0
 				}
@@ -88,8 +79,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -106,8 +96,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -116,7 +105,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-Release-5ba56f3b69cffd8da009.json",
+					"jsonFile" : "target-ALL_BUILD-Release-5045717f9250f9be9cfb.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
@@ -129,15 +118,8 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-client-Release-65f826b0101cb50430ac.json",
-					"name" : "client",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-server-Release-483d5dd3cc4de2aa46f2.json",
+					"jsonFile" : "target-server-Release-6378afe24878f0d53d9f.json",
 					"name" : "server",
 					"projectIndex" : 0
 				}
@@ -159,8 +141,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -177,8 +158,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -187,7 +167,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-MinSizeRel-5ba56f3b69cffd8da009.json",
+					"jsonFile" : "target-ALL_BUILD-MinSizeRel-5045717f9250f9be9cfb.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
@@ -200,15 +180,8 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-client-MinSizeRel-198922ae0da1679ab74d.json",
-					"name" : "client",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-server-MinSizeRel-fee9b2c1fa302b2c31ef.json",
+					"jsonFile" : "target-server-MinSizeRel-3eacdb9daf433c300798.json",
 					"name" : "server",
 					"projectIndex" : 0
 				}
@@ -230,8 +203,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -248,8 +220,7 @@
 					[
 						0,
 						1,
-						2,
-						3
+						2
 					]
 				}
 			],
@@ -258,7 +229,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ALL_BUILD::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-5ba56f3b69cffd8da009.json",
+					"jsonFile" : "target-ALL_BUILD-RelWithDebInfo-5045717f9250f9be9cfb.json",
 					"name" : "ALL_BUILD",
 					"projectIndex" : 0
 				},
@@ -271,15 +242,8 @@
 				},
 				{
 					"directoryIndex" : 0,
-					"id" : "client::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-client-RelWithDebInfo-0bf098069f30d2f0a80c.json",
-					"name" : "client",
-					"projectIndex" : 0
-				},
-				{
-					"directoryIndex" : 0,
 					"id" : "server::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-server-RelWithDebInfo-a9af6dd757cac9fb3e00.json",
+					"jsonFile" : "target-server-RelWithDebInfo-e868cb7bdf5f51bbd09d.json",
 					"name" : "server",
 					"projectIndex" : 0
 				}
