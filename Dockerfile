@@ -10,21 +10,15 @@ ENV DEBIAN_FRONTEND=noninteractive
 
 # Устанавливаем необходимые зависимости
 RUN apt-get update && apt-get install -y \
-    software-properties-common \
     g++ \
     libboost-system-dev \
     libboost-thread-dev \
+    libboost-serialization-dev \
     cmake \
     git \
     wget \
+    software-properties-common \
     && rm -rf /var/lib/apt/lists/*
-
-# Добавляем PPA для последней версии Boost
-RUN add-apt-repository ppa:boost-latest/ppa && apt-get update
-
-# Скачиваем и устанавливаем Boost из исходников, если стандартные пакеты не работают
-RUN wget -qO- https://boostorg.jfrog.io/artifactory/main/release/1.75.0/source/boost_1_75_0.tar.gz | tar xvz -C /usr/local
-RUN cd /usr/local/boost_1_75_0 && ./bootstrap.sh && ./b2 install
 
 # Копируем исходный код в контейнер
 COPY . /app
