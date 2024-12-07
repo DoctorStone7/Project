@@ -17,6 +17,9 @@
 //The directory containing a CMake configuration file for Boost.
 Boost_DIR:PATH=E:/boost/lib/cmake/Boost-1.86.0
 
+//Path to a file.
+Boost_INCLUDE_DIR:PATH=E:/boost/include/boost-1_86
+
 //Path to a program.
 CMAKE_AR:FILEPATH=E:/program C/VS 2022 17.7.5/VC/Tools/MSVC/14.37.32822/bin/Hostx64/x64/lib.exe
 
@@ -247,6 +250,8 @@ boostpz_SOURCE_DIR:STATIC=E:/boostpz
 # INTERNAL cache entries
 ########################
 
+//ADVANCED property for variable: Boost_DIR
+Boost_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_AR
 CMAKE_AR-ADVANCED:INTERNAL=1
 //This is the directory where this CMakeCache.txt was created
@@ -373,6 +378,8 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Boost
+FIND_PACKAGE_MESSAGE_DETAILS_Boost:INTERNAL=[E:/boost/lib/cmake/Boost-1.86.0/BoostConfig.cmake][c ][v1.86.0(1.70)]
 //ADVANCED property for variable: boost_headers_DIR
 boost_headers_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: boost_system_DIR

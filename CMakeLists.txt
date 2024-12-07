@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.10)
 # Указываем название проекта
 project(ChatApp)
 
-# Находим библиотеку Boost (минимальная версия 1.70, компоненты system)
-find_package(Boost 1.70 REQUIRED COMPONENTS system)
+# Ищем Boost и все необходимые компоненты
+find_package(Boost 1.70 REQUIRED)
 
 # Указываем, какие файлы будут собираться
 add_executable(server server.cpp)
@@ -12,8 +12,9 @@ add_executable(client client.cpp)
 
 # Подключаем Boost
 if(Boost_FOUND)
-    target_link_libraries(server Boost::Boost Boost::System)
-    target_link_libraries(client Boost::Boost Boost::System)
+    include_directories(${Boost_INCLUDE_DIRS})
+    target_link_libraries(server ${Boost_LIBRARIES})
+    target_link_libraries(client ${Boost_LIBRARIES})
 else()
     message(FATAL_ERROR "Boost not found!")
 endif()
