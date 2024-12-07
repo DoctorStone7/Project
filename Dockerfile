@@ -5,6 +5,9 @@ FROM ubuntu:20.04
 ENV LANG C.UTF-8
 ENV LC_ALL C.UTF-8
 
+# Устанавливаем переменную окружения для пропуска интерактивных запросов (для debconf)
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Устанавливаем необходимые зависимости
 RUN apt-get update && apt-get install -y \
     g++ \
