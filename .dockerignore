@@ -1,0 +1,8 @@
+client.cpp
+client.exe
+CMakeLists.txt
+.vscode/
+*.log
+*.tmp
+tests/
+build/

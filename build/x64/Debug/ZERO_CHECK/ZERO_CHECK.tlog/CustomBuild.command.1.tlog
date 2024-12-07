@@ -1,0 +1,10 @@
+^E:\BOOSTPZ\BUILD\CMAKEFILES\30838F4843689A25E6FB98EE6C68B53C\GENERATE.STAMP.RULE
+setlocal
+"E:\program C\VS 2022 17.7.5\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -SE:/boostpz -BE:/boostpz/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file E:/boostpz/build/boostpz.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

@@ -1,0 +1,25 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build with Boost",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++11",
+                "-I", "E:/boost/include/boost-1_86", // Путь к заголовочным файлам Boost
+                "${file}", // Текущий открытый файл
+                "-o", "${fileDirname}/${fileBasenameNoExtension}", // Выходной файл с именем в той же папке, что и исходник
+                "-L", "E:/boost/lib", // Путь к библиотекам Boost
+                "-lboost_system-mgw14-mt-s-x64-1_86", // Библиотека Boost System
+                "-lws2_32" // Библиотека для работы с сокетами (Windows)
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Build task for compiling the current C++ file with Boost"
+        }
+    ]
+}
