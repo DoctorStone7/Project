@@ -1,19 +1,28 @@
-# Используем базовый образ с компилятором C++
-FROM gcc:latest
+# Используем официальный образ с Ubuntu
+FROM ubuntu:20.04
 
-# Устанавливаем зависимости для Boost и компилятора
+# Устанавливаем зависимости
 RUN apt-get update && apt-get install -y \
-    libboost-all-dev \
-    build-essential \
+    g++ \
+    libboost-system-dev \
+    libboost-thread-dev \
+    libboost-asio-dev \
+    cmake \
+    git \
     && rm -rf /var/lib/apt/lists/*
 
-# Копируем файлы проекта в контейнер
+# Копируем исходный код в контейнер
+COPY . /app
+
+# Переходим в директорию с кодом
 WORKDIR /app
-COPY . .
 
-# Компилируем серверный код
-RUN g++ -std=c++11 -o server server.cpp -lboost_system -lboost_thread -lpthread
+# Компилируем сервер и клиент
+RUN g++ -o server server.cpp -lboost_system -lboost_thread -pthread
+RUN g++ -o client client.cpp -lboost_system -lboost_thread -pthread
 
-# Указываем порт и команду для запуска сервера
+# Открываем порт 8080
 EXPOSE 8080
+
+# Команда для запуска сервера
 CMD ["./server"]
